@@ -4053,4 +4053,5 @@
   <java-symbol type="array" name="config_notificationMsgPkgsAllowedAsConvos" />
 
   <java-symbol type="array" name="config_keep_warming_services" />
+  <java-symbol type="integer" name="config_alertSliderLocation" />
 </resources>
