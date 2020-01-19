@@ -3100,6 +3100,7 @@ public final class Settings {
             MOVED_TO_SECURE.add(Secure.INSTALL_NON_MARKET_APPS);
 
             MOVED_TO_SECURE.add(Secure.VOLUME_LINK_NOTIFICATION);
+            MOVED_TO_SECURE.add(Secure.CLICK_PARTIAL_SCREENSHOT);
         }
 
         @UnsupportedAppUsage
@@ -9001,6 +9002,12 @@ public final class Settings {
          * @hide
          */
         public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
+        /**
+         * Whether to take partial screenshot with volume down + power click.
+         * 0 = 0ff, 1 = on
+         */
+        public static final String CLICK_PARTIAL_SCREENSHOT = "click_partial_screenshot";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
