@@ -43,6 +43,9 @@ LOCAL_REQUIRED_MODULES := \
 	AccentColorFlatPinkOverlay \
 	AccentColorCyanOverlay \
 	AccentColorBlueGrayOverlay \
+	AccentColorCyanoBladeOverlay \
+	AccentColorICFBlueOverlay \
+	AccentColorLemonGrassOverlay \
 	DisplayCutoutEmulationCornerOverlay \
 	DisplayCutoutEmulationDoubleOverlay \
     DisplayCutoutEmulationHoleOverlay \
