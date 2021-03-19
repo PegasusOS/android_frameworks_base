@@ -7441,5 +7441,8 @@ message MetricsEvent {
     TILE_HEADS_UP = 1752;
     TILE_SYNC = 1753;
 
+    //PegasusOS
+    PEGASUS_SETTINGS = 1754;
+
   }
 }
