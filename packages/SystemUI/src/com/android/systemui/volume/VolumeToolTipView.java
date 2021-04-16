@@ -17,11 +17,13 @@
 package com.android.systemui.volume;
 
 import android.content.Context;
+import android.content.ContentResolver;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.CornerPathEffect;
 import android.graphics.Paint;
 import android.graphics.drawable.ShapeDrawable;
+import android.provider.Settings;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -61,6 +63,7 @@ public class VolumeToolTipView extends LinearLayout {
     }
 
     private void drawArrow() {
+        ContentResolver resolver = mContext.getContentResolver();
         View arrowView = findViewById(R.id.arrow);
 
         boolean isLandscape = getContext().getResources().getConfiguration().orientation
@@ -71,8 +74,8 @@ public class VolumeToolTipView extends LinearLayout {
 
         ShapeDrawable arrowDrawable = new ShapeDrawable(TriangleShape.create(arrowWidth, arrowHeight, true));
         if (isLandscape) {
-            boolean isPointingLeft = getContext().getResources().getBoolean(
-                    R.bool.config_audioPanelOnLeftSide);
+            boolean isPointingLeft = Settings.Secure.getInt(resolver,
+                Settings.Secure.VOLUME_PANEL_ON_LEFT, 0) == 1;
             arrowView.setRotation(isPointingLeft ? 270 : 90);
         }
 
